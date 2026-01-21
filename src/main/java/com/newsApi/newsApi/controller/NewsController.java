@@ -26,6 +26,12 @@ public class NewsController {
         this.newsService = newsService;
     }
 
+
+    @PostMapping("/up")
+    public String serverUpStatus(){
+        return "Server is up";
+    }
+
     @PostMapping("/news")
     public ResponseEntity<?> addNews(@RequestBody List<News> news){
        try {
